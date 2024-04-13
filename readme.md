@@ -17,7 +17,9 @@ How is the code located in the repository used? <br>
 
 Create a .env in the root folder.
 
-- PLACEHOLDER=VALUE
+- RABBITUSER=user
+- RABBITPW=password
+- RABBITURL=localhost
 
 ## How To Run
 
