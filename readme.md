@@ -17,18 +17,21 @@ How is the code located in the repository used? <br>
 
 Create a .env in the root folder.
 
-- PLACEHOLDER=VALUE
+- RABBITUSER=user
+- RABBITPW=password
+- RABBITURL=localhost
 
 ## How To Run
 
 Make sure the environment variables are set.<br>
-More Steps.<br>
+Pip install poetry -> poetry install -> poetry shell<br>
 Lastly, use the following command:
 
 ```bash
-run PLACEHOLDER
+run emailer.py
 ```
 
 ## Dependencies
 
-What dependencies are used and why.
+Poetry is used to handle dependencies.
+Pip install poetry -> poetry install -> poetry shell
