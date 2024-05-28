@@ -19,9 +19,10 @@ channel = connection.channel()
 channel.queue_declare(queue=story_comment_queue, durable=True)
 channel.queue_declare(queue=password_change_queue, durable=True)
 
+print("Starting to consume messages")
 # Start consuming from the queues
-channel.basic_consume(queue=story_comment_queue, on_message_callback=callback_new_comments, auto_ack=True)
-channel.basic_consume(queue=password_change_queue, on_message_callback=callback_password_changes, auto_ack=True)
+channel.basic_consume(queue=story_comment_queue, on_message_callback=callback_new_comments)
+channel.basic_consume(queue=password_change_queue, on_message_callback=callback_password_changes)
 
 # Start the consumer
 print(' [*] Waiting for messages. To exit press CTRL+C')
